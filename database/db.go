@@ -9,7 +9,7 @@ import (
 )
 
 func NewDB(dsn string) (*gorm.DB, error) {
-	time.Sleep(10 * time.Second)
+	time.Sleep(60 * time.Second)
 	db, err := gorm.Open(mysql.Open(dsn), &gorm.Config{})
 
 	if err != nil {
